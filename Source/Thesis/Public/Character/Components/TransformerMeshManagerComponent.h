@@ -4,17 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
-#include "FormComponent.generated.h"
+#include "TransformerMeshManagerComponent.generated.h"
 
 
 UCLASS(ClassGroup=(Custom), meta=(BlueprintSpawnableComponent))
-class THESIS_API UFormComponent : public UActorComponent
+class THESIS_API UTransformerMeshManagerComponent : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:
 	// Sets default values for this component's properties
-	UFormComponent();
+	UTransformerMeshManagerComponent();
 
 protected:
 	// Called when the game starts
