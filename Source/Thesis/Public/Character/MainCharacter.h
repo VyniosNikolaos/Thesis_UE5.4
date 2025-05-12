@@ -23,7 +23,7 @@ class AMainCharacter : public ACharacter
 public:
 	AMainCharacter();
 
-	// APawn interface
+	// APawn interface, might need to remove this and add it to a child player class ( and a child AI class for npcs)
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 	//virtual void PossessedBy(AController* NewController) override;
@@ -76,10 +76,17 @@ public:
 
 protected:
 
-	// To add mapping context
+	
 	virtual void BeginPlay();
 
+	UPROPERTY(EditAnywhere, Category = "Combat", meta = (AllowPrivateAccess = "true"))
+	TObjectPtr<USkeletalMeshComponent> Weapon;
+	
+
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
+
+
+
 
 	
 	/** Called for movement input */
